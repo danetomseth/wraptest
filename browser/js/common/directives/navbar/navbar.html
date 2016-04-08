@@ -1,0 +1,44 @@
+<div id="header" class="landing">
+    <div class="top">
+        <div class="brand">
+            <span>MAIN</span>
+        </div>
+        <div class="slogan">
+            Personal <span class="tag">#Whatever Your Want</span> Thing
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-ada" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
+                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <!-- <nav class="navbar navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <fullstack-logo></fullstack-logo>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
+                    <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+                </li>
+            </ul>
+            <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
+            <div ng-show="user" class="welcome">
+                <span>Welcome, {{ user.email }}!</span>
+                <a ng-click="logout()">Logout</a>
+            </div>
+        </div>
+    </nav> -->
